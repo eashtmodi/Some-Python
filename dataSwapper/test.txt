@@ -1,0 +1,35 @@
+def readingWriting():
+    fileName1=input("Enter The name of first file: ")
+    fileName2=input("Enter The name of second file please: ")
+    print("Thanks Intilazing...")
+    file1=open(fileName1,'r+')
+    file2=open(fileName2,'r+')
+    
+    file1Data=file1.readlines()
+    file2Data=file2.readlines()
+
+    print(file1Data)
+    print(file2Data)
+
+    file1.truncate(0)
+    file2.truncate(0)
+
+    for file2DataLoop in file2Data:
+        file2DataLoop.strip()
+        file1.write(file2DataLoop)
+    
+    for file1DataLoop in file1Data:
+        file1DataLoop.strip()
+        file2.write(file1DataLoop)
+
+    file1.close()
+    file2.close()
+    
+    
+        
+        
+readingWriting()
+print("Thanks for Taking Modi's Service")
+print("You may see results by opening files")
+input("Please enter to exit")
+
